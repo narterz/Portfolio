@@ -1,0 +1,31 @@
+@layer base {
+
+    button {
+        @apply font-bold border-transparent rounded-lg hover:opacity-60 transition-opacity ease-in-out delay-75 bg-secondary text-primary;
+        box-sizing: border-box;
+    }
+
+    input,
+    textarea {
+        @apply outline-none;
+        box-sizing: border-box;
+    }
+
+    html {
+        @apply w-screen h-screen overflow-x-hidden;
+         box-sizing: border-box;
+    }
+
+    header {
+        @apply z-20;
+         box-sizing: border-box;
+    }
+
+    body {
+        @apply font-encodeSans;
+         box-sizing: border-box;
+    }
+}
+
+
+

@@ -1,0 +1,198 @@
+@layer components {
+
+    nav {
+        .nav-links {
+            @apply relative;
+            box-sizing: border-box;
+            
+            &::after {
+                @apply bottom-0 block h-[2px] absolute w-0 left-[50%];
+                background: none repeat scroll 0 0 transparent;
+                content: "";
+                background: #EBA208;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            }
+            &:hover::after {
+                @apply w-full left-0;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    #about {
+        .about-icon-container {
+            @apply h-1/2 flex flex-row items-center justify-center w-full relative;
+            box-sizing: border-box;
+
+            .about-icons {
+                @apply text-primary h-full w-[10%] text-start absolute left-0 xsm:hidden md:block;
+                box-sizing: border-box;
+            }
+
+            .about-details {
+                @apply text-start xsm:text-center sm:text-start xsm:justify-center sm:justify-start flex items-center h-full w-[85%] md:absolute right-0 xsm:text-xxsm xsm:max-md:w-full xsm:border sm:border-none;
+                box-sizing: border-box;
+            }
+        }
+
+        #selfie {
+            border: 20px solid #493894;
+        }
+    }
+    
+    #projects {
+        .project-container {
+            @apply flex xsm:flex-col md:flex-row items-start justify-between h-[80vh] mb-11;
+             box-sizing: border-box;
+    
+            .project-img-container {
+                @apply xsm:max-md:w-full md:w-[52%] xsm:max-md:h-2/5 h-2/3 flex flex-col items-center justify-between;
+                 box-sizing: border-box;
+    
+                .project-title {
+                    @apply xsm:max-lg:flex md:hidden flex-row items-center xsm:max-lg:justify-center xsm:max-md:w-full h-1/6;
+                     box-sizing: border-box;
+    
+                    h1 {
+                        @apply xsm:text-md md:text-lg;
+                         box-sizing: border-box;
+                    }
+    
+                    span {
+                        @apply xsm:text-md md:text-lg; 
+                         box-sizing: border-box;
+                    }
+                }
+    
+                .img-cont {
+                    @apply md:h-[85%] xsm:max-md:h-4/6 md:w-full xsm:max-lg:flex justify-center items-center;
+                     box-sizing: border-box;
+    
+                    .img {
+                        @apply max-h-full max-w-full rounded-lg;
+                         box-sizing: border-box;
+                    }
+                }
+    
+                .project-links {
+                    @apply w-full xsm:mt-5 xxl:h-[15%] xsm:h-1/5 md:h-1/6 flex flex-row md:items-end xsm:max-md:items-center justify-between;
+                     box-sizing: border-box;
+    
+                    a {
+                        @apply xsm:w-5/12 sm:max-md:w-4/12 md:h-2/3 xsm:max-md:h-full md:w-2/6 xsm:text-xxsm;
+                         box-sizing: border-box;
+    
+                        .project-btns {
+                            @apply border-transparent rounded-lg xsm:max-md:w-full text-primary bg-secondary h-full w-full;
+                             box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+            .project-desc {
+                @apply xsm:max-md:w-full md:w-[45%]  xsm:max-md:h-3/5 xsm:max-md:ms-0 xsm:max-md:text-center xxl:ms-10  md:h-2/3 flex flex-col justify-between;
+                 box-sizing: border-box;
+    
+                .project-title {
+                    @apply xsm:max-lg:hidden md:flex flex-row items-center xsm:max-md:justify-center w-full h-1/5;
+                     box-sizing: border-box;
+    
+                    h1 {
+                        @apply xsm:text-md xsm:text-start md:text-lg xxl:text-xlg;
+                         box-sizing: border-box;
+                    }
+    
+                    span {
+                        @apply xsm:text-md md:text-lg xxl:text-xlg;
+                         box-sizing: border-box;
+                    }
+                }
+    
+                .project-features {       
+                    h2 {
+                        @apply xsm:text-sm;
+                         box-sizing: border-box;
+                    }
+                    
+                    small {
+                        @apply xsm:text-xxsm text-white xsm:mt-1 lg:text-xsm;
+                         box-sizing: border-box;
+                    }
+                }
+    
+                .kf {
+                    @apply xsm:text-[0.725rem];
+                     box-sizing: border-box;
+                }
+         
+                .project-text {
+                    @apply h-2/4 flex items-center justify-center;
+                     box-sizing: border-box;
+    
+                    small {
+                        @apply xsm:text-[0.8rem] lg:text-xxsm xxl:text-sm text-white;
+                         box-sizing: border-box;
+    
+                        small {
+                            @apply text-secondary;
+                             box-sizing: border-box;
+                        }
+                    }
+                }
+    
+                .project-langs-container {
+                    @apply flex flex-row items-center justify-between xsm:max-md:justify-evenly h-1/5  xsm:max-md:w-full xxl:w-[60%];
+                     box-sizing: border-box;
+    
+                    .project-langs {
+                        @apply w-[40%] h-full flex flex-col xsm:justify-center md:justify-end xsm:items-center md:items-start;
+                         box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+
+    #contact {
+        .contact-info {
+            @apply flex flex-row items-center lg:w-2/3 relative xsm:w-full xsm:text-xxsm xsm:text-black lg:text-white;
+             box-sizing: border-box;
+    
+            .contact-icons {
+                @apply xsm:w-1/5 md:justify-start md:items-start;
+                 box-sizing: border-box;
+            }
+    
+            small {
+                @apply xsm:text-xxsm xsm:w-4/5  md:text-xsm md:text-white;
+                 box-sizing: border-box;
+            }
+        }
+
+        form {
+            @apply lg:grid grid-cols-2 grid-rows-4 justify-evenly h-full items-center;
+            grid-template-areas: 
+            "input0 input1"
+            "input2 input3"
+            "input4 input4"
+            "button button";
+    
+            #input0 { grid-area: input0; }
+            #input1 { grid-area: input1; }
+            #input2 { grid-area: input2; }
+            #input3 { grid-area: input3; }
+            #input4 { grid-area: input4; }
+            #button { grid-area: button; }
+
+            .contact-inputs-container {
+                @apply flex  xsm:flex-col md:flex-row md:justify-between xsm:justify-evenly xsm:items-center xsm:w-full lg:w-full xsm:h-1/4;
+                 box-sizing: border-box;
+                
+                .contact-inputs {
+                    @apply xsm:w-full lg:w-4/5 border-b border-primary;
+                     box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
