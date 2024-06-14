@@ -12,6 +12,10 @@ export const Tech = () => {
 
     const iconSize: number = IsSmallScreen ? 35 : 40
 
+     //TODO: Add section for frontend, backend, other each on their own line 20vh each
+     //TODO: Add backend: Django, MySQL, PostgreSQL, PHP, GraphQL, Java
+     //TODO: Add other: Wordpress, Jest, Redux, Figma, GIT, 
+
     const techStack = [
         { name: "HTML", icon: <AiFillHtml5 className='text-[#E34F26]' size={iconSize} /> },
         { name: "CSS", icon: <SiCss3 className='text-[#1572B6]' size={iconSize} /> },

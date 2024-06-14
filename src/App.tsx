@@ -5,6 +5,7 @@ import { Nav } from './pages/Nav';
 import { Contact } from './pages/Contact';
 import { Projects } from './pages/Projects';
 import { Tech } from './components/Tech';
+import { Experience } from './pages/Experience';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <About />
       <Tech />
+      <Experience />
       <Projects />
       <Contact />
     </div>
@@ -21,3 +23,4 @@ function App() {
 }
 
 export default App;
+

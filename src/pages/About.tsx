@@ -63,8 +63,8 @@ export const About = () => {
                 >
                     <h1 className='w-full font-bold xsm:max-md:text-center xsm:text-md sm:text-lg lg:text-xlg'>Hey there! I'm <b className='text-primary'>Jayden</b></h1>
                     <div className='flex flex-col font-normal justify-evenly xsm:h-1/2 sm:max-lg:h-4/5 xl:w-10/12 '>
-                        <p className='xsm:text-xsm sm:text-sm md:text-sm xxl:text-md'>My goal as a software developer is to code web apps that make challenging or even ordinary tasks easier. I am willing to achieve that goal alongisde any team, for any client.</p>
-                        <p className='xsm:max-lg:mb-3 xsm:text-xsm sm:text-sm md:text-sm xxl:text-md'>My go to tech stack is <b className='text-[#61dbfb]'>React</b>, <b className='text-[#007acc]'>Typescript</b>, and <b className='text-[#06B6D4]'>TailwindCSS</b> but im more than willing to master any frontend or fullstack tech stack.</p>
+                        <p>My goal as a software developer is to code web apps that make challenging or even ordinary tasks easier. I am willing to achieve that goal alongisde any team, for any client.</p>
+                        <p className='xsm:max-lg:mb-3'>My go to tech stack is <b className='text-[#61dbfb]'>React</b>, <b className='text-[#007acc]'>Typescript</b>, and <b className='text-[#06B6D4]'>TailwindCSS</b> but im more than willing to master any frontend or fullstack tech stack.</p>
                     </div>
                     <div className='flex flex-row items-center justify-between sm:w-5/6 sm:ms-auto sm:me-auto md:max-xl:w-full xl:w-4/5 xxl:w-full sm:h-1/5'>
                         <div className='flex flex-col justify-between w-1/2 h-full'>

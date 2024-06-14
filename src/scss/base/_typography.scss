@@ -1,0 +1,25 @@
+@layer components {
+
+    h1,
+    h2,
+    h3 {
+        @apply font-bold;
+    }
+
+    h1 {
+        @apply xsm:text-md sm:text-lg lg:text-xlg;
+    }
+
+    h2 {
+        @apply xsm:text-lg;
+    }
+
+    .experience-text {
+        @apply xsm:text-xsm;
+    }
+
+    p {
+        @apply xsm:text-xsm sm:text-sm xxl:text-md
+    }
+    
+}
