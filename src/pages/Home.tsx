@@ -68,7 +68,7 @@ export const Home = () => {
                     </motion.div>
                     <div className="flex flex-col xxl:w-3/4 h-1/3 xsm:max-md:w-full xsm:max-md:h-2/4 justify-evenly xsm:max-md:text-center">
                         <p className="sm:max-md:text-sm xsm:text-xsm md:text-norm xl:text-md">I design and optimize quality responsive web applications with rich user interfaces and interactivity. </p>
-                        <p className="sm:max-md:text-sm xsm:text-xsm md:text-norm xl:text-md">I specialize in TypeScript and React, but I am more than capable of learning new tech stacks. </p>
+                        <p className="sm:max-md:text-sm xsm:text-xsm md:text-norm xl:text-md">I specialize in fullstack development and can a adapt and excel at any tech stack thrown my way. </p>
                     </div>
                     <div className="flex flex-row items-center justify-between xxl:w-3/4 xxl:h-1/5 xsm:max-md:h-1/4 xsm:max-xxl:w-full">
                         <div className="flex flex-row items-center justify-between h-full xxl:w-3/5 xsm:max-xxl:w-2/3">

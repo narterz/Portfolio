@@ -11,7 +11,11 @@
     }
 
     h2 {
-        @apply xsm:text-lg;
+        @apply xsm:text-lg text-primary font-bold;
+    }
+
+    h3 {
+        @apply xsm:text-md text-primary font-bold;
     }
 
     .experience-text {

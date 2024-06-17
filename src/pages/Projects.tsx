@@ -54,7 +54,6 @@ export const Projects = () => {
                 <Shirt />
                 <StudyTimer />
                 <QuickTrivia />
-                <CityLogin />
             </motion.div>
         </div>
     )

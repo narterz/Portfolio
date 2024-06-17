@@ -50,12 +50,12 @@ export const About = () => {
                     <img src={glassesSelfie} alt="me wearing glasses on vacation" className=" xsm:max-w-[70%] xsm:max-h-[70%] sm:max-w-[80%] sm:max-h-[90%] rounded-lg" id='selfie' />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className='flex flex-col items-start w-3/5 md:w-7/12 justify-evenly h-3/5 xsm:max-md:h-4/6 md:h-7/12 xsm:max-md:w-full'
                     ref={textRef}
                     initial="hidden"
                     animate={controlY}
-                    transition={{duration: 0.5, delay: 0.25}}
+                    transition={{ duration: 0.5, delay: 0.25 }}
                     variants={{
                         hidden: { opacity: 0, x: 75 },
                         visible: { opacity: 1, x: 0 }
@@ -63,29 +63,17 @@ export const About = () => {
                 >
                     <h1 className='w-full font-bold xsm:max-md:text-center xsm:text-md sm:text-lg lg:text-xlg'>Hey there! I'm <b className='text-primary'>Jayden</b></h1>
                     <div className='flex flex-col font-normal justify-evenly xsm:h-1/2 sm:max-lg:h-4/5 xl:w-10/12 '>
-                        <p>My goal as a software developer is to code web apps that make challenging or even ordinary tasks easier. I am willing to achieve that goal alongisde any team, for any client.</p>
-                        <p className='xsm:max-lg:mb-3'>My go to tech stack is <b className='text-[#61dbfb]'>React</b>, <b className='text-[#007acc]'>Typescript</b>, and <b className='text-[#06B6D4]'>TailwindCSS</b> but im more than willing to master any frontend or fullstack tech stack.</p>
+                        <p>My goal as a software developer is to develop web apps and make challenging or even ordinary tasks easier. I am willing to achieve that goal alongside any team, for any client.</p>
+                        <p className='xsm:max-lg:mb-3'>I have been tech-savvy since a young age. My dream is to work with development teams and make a significant impact in the tech industry. </p>
                     </div>
                     <div className='flex flex-row items-center justify-between sm:w-5/6 sm:ms-auto sm:me-auto md:max-xl:w-full xl:w-4/5 xxl:w-full sm:h-1/5'>
-                        <div className='flex flex-col justify-between w-1/2 h-full'>
-                            <div className='about-icon-container'>
-                                <AiFillPushpin className='about-icons' />
-                                <small className='about-details'>Location: Norwalk, Connecticut</small>
-                            </div>
-                            <div className='about-icon-container'>
-                                <FaGraduationCap className='about-icons' />
-                                <small className='about-details'>Education: University of Connecticut BA</small>
-                            </div>
+                        <div className='about-icon-container'>
+                            <AiFillPushpin className='about-icons' />
+                            <small className='about-details'>Location: Norwalk, Connecticut</small>
                         </div>
-                        <div className='flex flex-col justify-between w-1/2 h-full'>
-                            <div className='about-icon-container sm:ms-10'>
-                                <LiaBirthdayCakeSolid className='about-icons' />
-                                <small className='about-details'>Age: 23</small>
-                            </div>
-                            <div className='about-icon-container sm:ms-10'>
-                                <MdComputer className='about-icons' />
-                                <small className='about-details'>Experience: 1+ years</small>
-                            </div>
+                        <div className='about-icon-container'>
+                            <FaGraduationCap className='about-icons' />
+                            <small className='about-details'>Education: University of Connecticut BA</small>
                         </div>
                     </div>
                 </motion.div>

@@ -47,8 +47,9 @@ export const ChromaBlend = () => {
                     <span className="h-full text-secondary text-title ms-5">&#125; </span>
                 </div>
                 <div className='project-text'>
-                    <small>Chroma Blendr is a UI tool that assists desisners and developers with crafting a color scheme for their project.
-                        The Palette Generator uses concepts from color theory to randomly generate a visually appealing five tile color palette on the click of a button.
+                    <small>
+                        Chroma Blendr is a UI tool that assists desisners and developers with crafting a color scheme for their project.
+                        The Palette Generator uses concepts from color theory to generate a five tile color palette.
                         The Photo Seeker uses the K-Means and Median Cut algorithms to extract a five title color palette from any image.
                     </small>
                 </div>
