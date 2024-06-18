@@ -52,6 +52,7 @@ export const ChromaBlend = () => {
                         The Palette Generator uses concepts from color theory to generate a five tile color palette.
                         The Photo Seeker uses the K-Means and Median Cut algorithms to extract a five title color palette from any image.
                     </small>
+                    <small className='text-secondary'>Warning: Deployment of this project is still a work in progress. Please visit github repo and clone locally to view</small>
                 </div>
                 <div className='project-features'>
                     <h2 className='font-semibold text-white'>Key Features</h2>
