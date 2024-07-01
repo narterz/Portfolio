@@ -14,7 +14,7 @@ const languages = [
     { name: "NextJS", icon: <SiNextdotjs className='text-[#333333]' size={20} /> },
 ]
 
-const websiteURL = "https://laugh-login-client.vercel.app/home";
+const websiteURL = "https://laughlogin.com/home";
 const githubURL = "https://github.com/narterz/City-Login-2";
 
 const keyFeatures = [
