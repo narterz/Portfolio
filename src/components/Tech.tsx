@@ -1,8 +1,9 @@
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaFigma } from "react-icons/fa";
-import { SiCss3, SiSass, SiTailwindcss, SiShopify, SiBootstrap, SiFirebase, SiMicrosoftsqlserver, SiDocker, SiExpress, SiGraphql, SiNextdotjs, SiPostgresql, SiMongodb, SiTypescript, SiDjango } from 'react-icons/si';
+import { SiCss3, SiLinux, SiGnubash, SiApachedruid, SiKubernetes, SiSass, SiTailwindcss, SiShopify, SiBootstrap, SiFirebase, SiMicrosoftsqlserver, SiDocker, SiExpress, SiGraphql, SiNextdotjs, SiPostgresql, SiMongodb, SiTypescript, SiDjango } from 'react-icons/si';
 import { BiLogoJavascript, BiLogoReact, BiLogoNodejs, BiLogoPython } from 'react-icons/bi';
 import { BsGit } from 'react-icons/bs';
+import { GrMysql } from "react-icons/gr";
 import { useMediaQuery } from 'react-responsive';
 
 export const Tech = () => {
@@ -27,10 +28,15 @@ export const Tech = () => {
         { name: "MongoDB", icon: <SiMongodb className='text-[#589636]' size={iconSize} /> },
         { name: "GraphQL", icon: <SiGraphql className='text-[#E10098]' size={iconSize} /> },
         { name: "PostgresSQL", icon: <SiPostgresql className='text-[#E10098]' size={iconSize} /> },
+        { name: "MySQL", icon: <GrMysql className='text-[#4479A1]' size={iconSize} /> },
+        { name: "Apache Druid", icon: <SiApachedruid className='text-[#F37626]' size={iconSize} /> },
         { name: "MicrosoftSQL", icon: <SiMicrosoftsqlserver className='text-red-500' size={iconSize} /> },
         { name: "Python", icon: <BiLogoPython className='text-[#3776AB]' size={iconSize} /> },
+        { name: "Bash", icon: <SiGnubash className='text-[#4EAA25]' size={iconSize} /> },
         { name: "GIT", icon: <BsGit className='text-[#F05032]' size={iconSize} /> },
+        { name: "Linux", icon: <SiLinux className='text-[#FCC624]' size={iconSize} /> },
         { name: "Docker", icon: <SiDocker className='text-[#0db7ed]' size={iconSize} /> },
+        { name: "Kubernetes", icon: <SiKubernetes className='text-[#326ce5]' size={iconSize} /> },
         { name: "Figma", icon: <FaFigma className='text-[#a259ff]' size={iconSize} /> },
         { name: "Shopify", icon: <SiShopify className='text-[#96bf48]' size={iconSize} /> },
         { name: "Firebase", icon: <SiFirebase className='text-[#F6820D]' size={iconSize} /> },

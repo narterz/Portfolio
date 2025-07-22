@@ -40,6 +40,17 @@
         }
     }
 
+    #experience {
+        #experience-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #experience::-webkit-scrollbar-track {
+            background: #493894;
+            box-sizing: border-box;
+        }
+    }
+
 
     #projects {
         .project-container {
