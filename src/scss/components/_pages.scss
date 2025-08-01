@@ -20,12 +20,17 @@
     }
 
     #about {
+
         .about-icon-container {
-            @apply h-1/2 flex flex-row items-center justify-center w-full relative;
+            @apply h-full flex flex-row items-center justify-center w-full relative;
             box-sizing: border-box;
 
+            b {
+                @apply text-primary mr-2;
+            }
+
             .about-icons {
-                @apply text-primary h-full w-[10%] text-start absolute left-0 xsm:hidden md:block;
+                @apply text-primary h-full w-[10%] text-start absolute left-0 hidden xl:visible md:block;
                 box-sizing: border-box;
             }
 
@@ -37,17 +42,6 @@
 
         #selfie {
             border: 20px solid #493894;
-        }
-    }
-
-    #experience {
-        #experience-scroll::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        #experience::-webkit-scrollbar-track {
-            background: #493894;
-            box-sizing: border-box;
         }
     }
 
