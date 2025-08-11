@@ -7,9 +7,6 @@ import { motion, useInView, useAnimation } from 'framer-motion';
 import { Link } from "react-scroll";
 
 export const Home = () => {
-    const githubLink = "https://github.com/narterz";
-    const linkedInLink = "https://www.linkedin.com/in/jayden-shelton-136883182/";
-
     const titleRef = useRef<HTMLDivElement>(null);
     const imgRef = useRef<HTMLDivElement>(null);
     const isTitleInView = useInView(titleRef, { once: true });
@@ -30,6 +27,16 @@ export const Home = () => {
         }
     })
 
+    const footerSocials = [
+        { name: "Github", link: "https://github.com/narterz", icon: <AiOutlineGithub  className="social-icons home-social-icons" /> },
+        { name: "LinkedIn", link: "https://www.linkedin.com/in/jayden-shelton-136883182/", icon:  <AiOutlineLinkedin className="social-icons home-social-icons" /> }
+    ]
+
+    const footerButtons = [
+        {jumpTo: "contact", text: "Contact me"},
+        { jumpTo: "projects", text: "View Project"}
+    ]
+
     return (
         <div className="h-[92vh] w-full bg-primary relative overflow-hidden" id="home">
             <ParticleBackground />
@@ -48,7 +55,7 @@ export const Home = () => {
                 </motion.div>
                 <div className="w-[60%] xsm:max-md:w-full h-3/4 md:h-[80%] md:ms-10 md:me-5 xsm:max-md:h-3/5 flex items-start xxl:ms-24 flex-col justify-evenly text-white cursor-default">
                     <motion.div
-                        className="flex flex-col xsm:max-md:h-1/4 xxl:w-[43%] md:w-full xsm:max-md:items-center xsm:max-md:w-full hover:animate-pulse"
+                        className="home-title-container flex flex-col justify-center hover:animate-pulse"
                         ref={titleRef}
                         initial="hidden"
                         animate="visible"
@@ -57,49 +64,40 @@ export const Home = () => {
                             hidden: { opacity: 0, x: 75 },
                             visible: { opacity: 1, x: 0 }
                         }}>
-                        <div className="flex flex-row items-center xsm:max-md:me-10">
-                            <span className="text-secondary text-xlg xsm:max-md:text-lg md:text-xxl">&#123; </span>
-                            <h1 className="ms-5 xsm:max-lg:text-lg lg:text-xlg">Jayden Shelton</h1>
+                        <div className="home-title me-10" id="home-title-top">
+                            <span className="bracket">&#123; </span>
+                            <h2 className="ms-5">Jayden Shelton</h2>
                         </div>
-                        <div className="flex flex-row items-center w-full ms-20 xsm:max-md:justify-center xsm:max-md:mb-5">
-                            <h1 className="me-5 xsm:max-lg:text-lg lg:text-xlg">Web Developer</h1>
-                            <span className="flex flex-row text-secondary text-xlg md:text-xxl xsm:max-md:text-lg">&#125;</span>
+                        <div className="home-title w-full" id="home-title-bottom">
+                            <h2 className="me-5">Web Developer</h2>
+                            <span className="bracket">&#125;</span>
                         </div>
                     </motion.div>
-                    <div className="flex flex-col xxl:w-3/4 h-1/3 xsm:max-md:w-full xsm:max-md:h-2/4 justify-evenly xsm:max-md:text-center">
-                        <p className="sm:max-md:text-sm xsm:text-xsm md:text-norm xl:text-md">I design and optimize quality responsive web applications with rich user interfaces and interactivity. </p>
-                        <p className="sm:max-md:text-sm xsm:text-xsm md:text-norm xl:text-md">I specialize in fullstack development and can a adapt and excel at any tech stack thrown my way. </p>
+                    <div className="home-text-main flex flex-col text-start justify-evenly h-1/3">
+                        <h3 className="font-normal">I design and optimize quality responsive web applications with rich user interfaces and interactivity. </h3>
+                        <h3 className="font-normal">I specialize in fullstack development and can a adapt and excel at any tech stack thrown my way. </h3>
                     </div>
                     <div className="flex flex-row items-center justify-between xxl:w-3/4 xxl:h-1/5 xsm:max-md:h-1/4 xsm:max-xxl:w-full">
                         <div className="flex flex-row items-center justify-between h-full xxl:w-3/5 xsm:max-xxl:w-2/3">
-                            <Link
-                                className="xsm:w-[45%] xxl:h-1/2  md:max-xxl:h-full xsm:h-1/3 sm:max-lg:w-2/5 lg:w-[40%]" 
-                                to="contact"
+                        {footerButtons.map((but) => (
+                            <Link 
+                                className="w-[46%] flex items-center h-1/3 md:h-full xxl:h-1/2 xxl:w-[45%]"
+                                to={but.jumpTo}
                                 spy={true}
                                 smooth={true}
                                 duration={500}
                                 offset={-55}
                             >
-                                <button className="w-full h-full xsm:text-xxsm lg:text-xsm">Contact me</button>
+                                <button className="w-full h-full xxl:h-5/6">{but.text}</button>
                             </Link>
-                            <Link
-                                className="xsm:w-[45%] xl:h-full xxl:h-1/2 xsm:h-1/3 xsm:m-3 md:me-8 md:h-full sm:max-lg:w-2/5 lg:w-[40%]"                                 
-                                to="projects"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
-                                offset={-55}
-                            >
-                                <button className="w-full h-full xsm:text-xxsm lg:text-xsm">View Projects</button>
-                            </Link>
+                        ))}
                         </div>
-                        <div className="flex flex-row items-center justify-between lg:justify-evenly xxl:justify-between xxl:w-1/4 xsm:max-xxl:w-1/3">
-                            <a href={githubLink}>
-                                <AiOutlineGithub size={50} className="transition-colors ease-in delay-100 cursor-pointer hover:text-secondary" />
-                            </a>
-                            <a href={linkedInLink}>
-                                <AiOutlineLinkedin size={50} className="transition-colors ease-in delay-100 cursor-pointer hover:text-secondary" />
-                            </a>
+                        <div className="home-social-container flex flex-row items-center justify-between">
+                            {footerSocials.map((social) => (
+                                <a href={social.link} key={social.name} id={`home-socials_${social.name}`}>
+                                    {social.icon}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>

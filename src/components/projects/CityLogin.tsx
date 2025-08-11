@@ -43,7 +43,6 @@ export const CityLogin = () => {
                     <span className="text-secondary text-title">&#123; </span>
                     <h1 className='text-white ms-5'>City Login</h1>
                     <span className="text-secondary text-title ms-5">&#125; </span>
-
                 </div>
                 <div className="project-text">
                     <small>

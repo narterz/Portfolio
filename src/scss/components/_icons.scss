@@ -1,0 +1,11 @@
+@layer components {
+
+    .social-icons {
+        @apply transition-colors ease-in delay-100 cursor-pointer hover:text-secondary;
+    }
+
+    .bracket {
+        @apply text-secondary text-xlg md:text-xxl xsm:max-md:text-lg;
+    }
+
+}

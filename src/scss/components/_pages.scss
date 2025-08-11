@@ -1,205 +1,264 @@
 @layer components {
-
-    nav {
-        .nav-links {
-            @apply relative;
-            box-sizing: border-box;
-            
-            &::after {
-                @apply bottom-0 block h-[2px] absolute w-0 left-[50%];
-                background: none repeat scroll 0 0 transparent;
-                content: "";
-                background: #EBA208;
-                transition: width 0.3s ease 0s, left 0.3s ease 0s;
-            }
-            &:hover::after {
-                @apply w-full left-0;
-                box-sizing: border-box;
-            }
-        }
+  nav {
+    .nav-logo {
+      text-align: center;
+      border: 2px solid orange;
+      @apply xsm:w-1/5 md:w-1/4;
     }
 
-    #about {
+    .nav-links {
+      @apply relative;
+      box-sizing: border-box;
 
-        .about-icon-container {
-            @apply h-full flex flex-row items-center justify-center w-full relative;
-            box-sizing: border-box;
+      &::after {
+        @apply bottom-0 block h-[2px] absolute w-0 left-[50%];
+        background: none repeat scroll 0 0 transparent;
+        content: "";
+        background: #eba208;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      }
+      &:hover::after {
+        @apply w-full left-0;
+        box-sizing: border-box;
+      }
+    }
+  }
 
-            b {
-                @apply text-primary mr-2;
-            }
+  #home {
+    .home-title-container {
+      @apply xsm:max-md:h-1/4 xsm:max-md:items-center xsm:max-md:w-full;
+      @apply md:w-full;
+      @apply xxl:w-[43%];
 
-            .about-icons {
-                @apply text-primary h-full w-[10%] text-start absolute left-0 hidden xl:visible md:block;
-                box-sizing: border-box;
-            }
+      .home-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @apply xsm:max-md:w-1/2;
+      }
 
-            .about-details {
-                @apply text-start xsm:text-center sm:text-start xsm:justify-center sm:justify-start flex items-center h-full w-[85%] md:absolute right-0 xsm:text-xxsm xsm:max-md:w-full xsm:border sm:border-none;
-                box-sizing: border-box;
-            }
-        }
-
-        #selfie {
-            border: 20px solid #493894;
-        }
+      #home-title-bottom {
+        @apply xsm:max-lg:ms-20;
+        @apply lg:ms-12;
+      }
     }
 
-
-    #projects {
-        .project-container {
-            @apply flex xsm:flex-col md:flex-row items-start justify-between h-[80vh] mb-11;
-             box-sizing: border-box;
-    
-            .project-img-container {
-                @apply xsm:max-md:w-full md:w-[52%] xsm:max-md:h-2/5 h-2/3 flex flex-col items-center justify-between;
-                 box-sizing: border-box;
-    
-                .project-title {
-                    @apply xsm:max-lg:flex md:hidden flex-row items-center xsm:max-lg:justify-center xsm:max-md:w-full h-1/6;
-                     box-sizing: border-box;
-    
-                    h1 {
-                        @apply xsm:text-md md:text-lg;
-                         box-sizing: border-box;
-                    }
-    
-                    span {
-                        @apply xsm:text-md md:text-lg; 
-                         box-sizing: border-box;
-                    }
-                }
-    
-                .img-cont {
-                    @apply md:h-[85%] xsm:max-md:h-4/6 md:w-full xsm:max-lg:flex justify-center items-center;
-                     box-sizing: border-box;
-    
-                    .img {
-                        @apply max-h-full max-w-full rounded-lg;
-                         box-sizing: border-box;
-                    }
-                }
-    
-                .project-links {
-                    @apply w-full xsm:mt-5 xxl:h-[15%] xsm:h-1/5 md:h-1/6 flex flex-row md:items-end xsm:max-md:items-center justify-between;
-                     box-sizing: border-box;
-    
-                    a {
-                        @apply xsm:w-5/12 sm:max-md:w-4/12 md:h-2/3 xsm:max-md:h-full md:w-2/6 xsm:text-xxsm;
-                         box-sizing: border-box;
-    
-                        .project-btns {
-                            @apply border-transparent rounded-lg xsm:max-md:w-full text-primary bg-secondary h-full w-full;
-                             box-sizing: border-box;
-                        }
-                    }
-                }
-            }
-            .project-desc {
-                @apply xsm:max-md:w-full md:w-[45%]  xsm:max-md:h-3/5 xsm:max-md:ms-0 xsm:max-md:text-center xxl:ms-10  md:h-2/3 flex flex-col justify-between;
-                 box-sizing: border-box;
-    
-                .project-title {
-                    @apply xsm:max-lg:hidden md:flex flex-row items-center xsm:max-md:justify-center w-full h-1/5;
-                     box-sizing: border-box;
-    
-                    h1 {
-                        @apply xsm:text-md xsm:text-start md:text-lg xxl:text-xlg;
-                         box-sizing: border-box;
-                    }
-    
-                    span {
-                        @apply xsm:text-md md:text-lg xxl:text-xlg;
-                         box-sizing: border-box;
-                    }
-                }
-    
-                .project-features {       
-                    h2 {
-                        @apply xsm:text-sm;
-                         box-sizing: border-box;
-                    }
-                    
-                    small {
-                        @apply xsm:text-xxsm text-white xsm:mt-1 lg:text-xsm;
-                         box-sizing: border-box;
-                    }
-                }
-    
-                .kf {
-                    @apply xsm:text-[0.725rem];
-                     box-sizing: border-box;
-                }
-         
-                .project-text {
-                    @apply h-2/4 flex items-center justify-center;
-                     box-sizing: border-box;
-    
-                    small {
-                        @apply xsm:text-[0.8rem] lg:text-xxsm xxl:text-sm text-white;
-                         box-sizing: border-box;
-    
-                        small {
-                            @apply text-secondary;
-                             box-sizing: border-box;
-                        }
-                    }
-                }
-    
-                .project-langs-container {
-                    @apply flex flex-row items-center justify-between xsm:max-md:justify-evenly h-1/5  xsm:max-md:w-full xxl:w-[60%];
-                     box-sizing: border-box;
-    
-                    .project-langs {
-                        @apply w-[40%] h-full flex flex-col xsm:justify-center md:justify-end xsm:items-center md:items-start;
-                         box-sizing: border-box;
-                    }
-                }
-            }
-        }
+    .home-text-main {
+      @apply xsm:max-md:text-center xsm:max-md:w-full xsm:max-md:h-2/4;
+      @apply lg:w-3/4;
     }
 
+    .home-social-container {
+      @apply xxl:w-2/5 justify-between;
+      @apply lg:justify-evenly;
+      @apply xsm:max-lg:justify-evenly xsm:max-xxl:w-1/3;
+
+      .home-social-icons {
+        @apply xsm:text-xxl xxl:text-[4rem];
+      }
+    }
+  }
+
+  #about {
+    .about-img-container {
+      @apply xsm:max-lg:h-1/3 xsm:max-lg:mt-5;
+      @apply lg:h-3/5;
+      @apply w-full xsm:max-lg:h-1/3 xsm:max-md:mt-5;
+      @apply xl:h-4/5;
+    }
+
+    .about-text-container {
+      @apply xsm:max-lg:h-1/2 xsm:max-lg:justify-between;
+      @apply lg:h-[53%] lg:justify-around;
+      @apply xl:h-4/5;
+    }
+
+    .about-icon-container {
+      @apply h-full flex flex-row w-full relative;
+
+      b {
+        @apply text-primary mr-2;
+      }
+
+      .about-icons {
+        @apply text-primary h-full w-[10%] text-start absolute left-0 hidden xl:visible md:block;
+      }
+
+      .about-details {
+        @apply text-center xsm:text-center sm:text-start xsm:justify-center sm:justify-start flex items-center h-full w-[85%] md:absolute right-0 xsm:text-xxsm xsm:max-md:w-full xsm:border sm:border-none;
+      }
+    }
+
+    #selfie {
+      border: 20px solid #493894;
+    }
+  }
+
+  #experience {
+    .experience-body-container {
+      @apply xl:flex-row;
+
+      .experience-jobs {
+        @apply xsm:max-md:h-1/2;
+      }
+
+      .experience-skills {
+        @apply xsm:max-md:h-1/2;
+      }
+    }
+  }
+
+  #projects {
+    @apply xsm:h-[650vh];
+    @apply lg:h-[750vh];
+    @apply xl:h-[650vh];
+
+    .project-header {
+      @apply xsm:mt-14;
+      @apply w-full xsm:max-lg:items-center items-start lg:justify-between;
+      @apply lg:h-[13vh];
+      @apply xsm:max-md:h-[1vh];
+    }
+
+    .project-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100vh;
+      @apply flex-col rounded-lg w-full xl:flex-row;
+
+      .project-visuals-container {
+        @apply xsm:h-2/3 xsm:justify-between xsm:w-full;
+        @apply xl:w-1/2 xl:h-2/3;
+
+        .project-visuals-title {
+          @apply xsm:self-center xsm:h-[15%] xsm:w-1/2 xsm:ms-auto xsm:me-auto;
+          @apply xxl:w-full;
+
+          .bracket {
+            @apply h-full flex items-center;
+          }
+        }
+        .project-visuals-img {
+          @apply xsm:h-[40%];
+          @apply md:h-2/3;
+          @apply lg:h-[70%];
+          @apply xl:h-[50%];
+          @apply xxl:h-[70%] xxl:w-full;
+
+          img {
+            @apply xsm:w-auto xsm:h-auto;
+            @apply h-full xxl:w-auto;
+          }
+        }
+
+        .project-visuals-btns-container {
+          height: 15%;
+          @apply md:self-center md:w-[87%];
+          @apply lg:w-[83%] lg:items-center;
+          @apply lg:min-w-[85%];
+          @apply xl:w-full;
+
+            a {
+              position: relative;
+              @apply xsm:w-1/3;
+              @apply md:w-1/4;
+              @apply lg:w-1/4 lg:h-1/2;
+              @apply xl:w-1/3 xl:justify-items-end;
+              @apply xxl:w-2/6;
+              @apply xl:self-end;
+            }
+
+          .project-btns {
+            @apply xsm:h-full xsm:w-full;
+            @apply sm:h-[60%];
+            @apply lg:h-full;
+            @apply xl:absolute xl:bottom-0 xl:text-norm;
+          }
+        }
+
+      }
+
+      .project-description-container {
+        @apply xsm:max-xl:w-full xsm:max-lg:h-3/5;
+        @apply xsm:h-1/2;
+        @apply xl:w-1/2 xl:h-2/3 xl:pl-6;
+
+        .project-description-summary {
+          @apply xsm:text-center xsm:h-1/2;
+          @apply md:h-[40%];
+          @apply lg:text-start lg:h-1/3;
+        }
+
+        .project-description-features {
+          @apply xsm:h-1/3 xsm:flex xsm:justify-between flex-col;
+          @apply md:h-1/2;
+          @apply lg:justify-evenly;
+        }
+
+        .project-description-tech {
+           @apply md:w-full md:h-1/4;
+           @apply lg:h-auto;
+           @apply xxl:w-4/5;
+
+        }
+      }
+
+    }
 
     #contact {
-        .contact-info {
-            @apply flex flex-row items-center lg:w-2/3 relative xsm:w-full xsm:text-xxsm xsm:text-black lg:text-white;
-             box-sizing: border-box;
-    
-            .contact-icons {
-                @apply xsm:w-1/5 md:justify-start md:items-start;
-                 box-sizing: border-box;
-            }
-    
-            small {
-                @apply xsm:text-xxsm xsm:w-4/5  md:text-xsm md:text-white;
-                 box-sizing: border-box;
-            }
+      .contact-info {
+        @apply flex flex-row items-center lg:w-2/3 relative xsm:w-full xsm:text-xxsm xsm:text-black lg:text-white;
+        box-sizing: border-box;
+
+        .contact-icons {
+          @apply xsm:w-1/5 md:justify-start md:items-start;
+          box-sizing: border-box;
         }
 
-        form {
-            @apply lg:grid grid-cols-2 grid-rows-4 justify-evenly h-full items-center;
-            grid-template-areas: 
-            "input0 input1"
-            "input2 input3"
-            "input4 input4"
-            "button button";
-    
-            #input0 { grid-area: input0; }
-            #input1 { grid-area: input1; }
-            #input2 { grid-area: input2; }
-            #input3 { grid-area: input3; }
-            #input4 { grid-area: input4; }
-            #button { grid-area: button; }
-
-            .contact-inputs-container {
-                @apply flex  xsm:flex-col md:flex-row md:justify-between xsm:justify-evenly xsm:items-center xsm:w-full lg:w-full xsm:h-1/4;
-                 box-sizing: border-box;
-                
-                .contact-inputs {
-                    @apply xsm:w-full lg:w-4/5 border-b border-primary;
-                     box-sizing: border-box;
-                }
-            }
+        small {
+          @apply xsm:text-xxsm xsm:w-4/5  md:text-xsm md:text-white;
+          box-sizing: border-box;
         }
+      }
+
+      form {
+        @apply lg:grid grid-cols-2 grid-rows-4 justify-evenly h-full items-center;
+        grid-template-areas:
+          "input0 input1"
+          "input2 input3"
+          "input4 input4"
+          "button button";
+
+        #input0 {
+          grid-area: input0;
+        }
+        #input1 {
+          grid-area: input1;
+        }
+        #input2 {
+          grid-area: input2;
+        }
+        #input3 {
+          grid-area: input3;
+        }
+        #input4 {
+          grid-area: input4;
+        }
+        #button {
+          grid-area: button;
+        }
+
+        .contact-inputs-container {
+          @apply flex  xsm:flex-col md:flex-row md:justify-between xsm:justify-evenly xsm:items-center xsm:w-full lg:w-full xsm:h-1/4;
+          box-sizing: border-box;
+
+          .contact-inputs {
+            @apply xsm:w-full lg:w-4/5 border-b border-primary;
+            box-sizing: border-box;
+          }
+        }
+      }
     }
+  }
 }

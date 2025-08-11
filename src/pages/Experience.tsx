@@ -5,12 +5,12 @@ import { jobs } from "../constants/jobs"
 export const Experience = () => {
     return (
         <div className="h-[100vh] me-auto ms-auto w-[90%] flex flex-col justify-between items-center" id="experience">
-            <div className='flex flex-col items-start h-[10%] justify-evenly w-full'>
+            <div className='flex flex-col items-start h-[10%] justify-evenly w-full xsm:max-lg:items-center'>
                 <h1 className='text-primary'>Experience</h1>
                 <p className='font-light'>List of skills and past relevant professional positions</p>
             </div>
-            <div className="h-[85%] w-full flex flex-row items-center justify-between">
-                <div className='flex flex-col items-center justify-between w-full h-full overflow-y-scroll space-y-8 py-4' id="experience-scroll">
+            <div className="experience-body-container h-[85%] w-full flex flex-col items-center justify-between">
+                <div className='experience-jobs flex flex-col items-center justify-between w-full h-full overflow-y-scroll space-y-8 py-4' id="experience-scroll">
                     {jobs.map((job, i) => {
                         return (
                             <div className='flex items-start w-full h-1/2 justify-evenly flex-col' key={i}>
@@ -36,7 +36,7 @@ export const Experience = () => {
                         )
                     })}
                 </div>
-                <div className="flex justify-center w-full h-full">
+                <div className="experience-skills flex justify-center w-full h-full">
                     <Tech />
                 </div>
             </div>

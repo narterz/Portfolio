@@ -1,29 +1,32 @@
-@layer components {
+@layer base {
 
     h1,
-    h2,
-    h3 {
+    h2 {
         @apply font-bold;
     }
 
     h1 {
-        @apply xsm:text-md sm:text-lg lg:text-xlg;
+        @apply xsm:text-lg lg:text-xxl;
     }
 
     h2 {
-        @apply xsm:text-lg text-primary font-bold;
+        @apply xsm:text-md md:text-lg lg:text-xlg;
     }
 
     h3 {
-        @apply xsm:text-md text-primary font-bold;
-    }
-
-    .experience-text {
-        @apply xsm:text-xsm;
+        @apply xsm:text-norm md:text-md xl:text-lg;
     }
 
     p {
-        @apply xsm:text-xsm sm:text-sm xxl:text-md
+        @apply xsm:text-xsm md:text-sm font-regular;
+    }
+
+    small {
+        @apply xsm:text-xxsm;
+    }
+
+    button {
+        @apply xsm:text-xxsm sm:text-xsm md:text-sm lg:text-norm xxl:text-lg bg-secondary text-primary;
     }
     
 }
