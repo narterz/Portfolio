@@ -1,7 +1,7 @@
 @layer components {
 
     .social-icons {
-        @apply transition-colors ease-in delay-100 cursor-pointer hover:text-secondary;
+        @apply transition-colors ease-in delay-100 cursor-pointer hover:text-secondary text-primary;
     }
 
     .bracket {

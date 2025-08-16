@@ -1,6 +1,6 @@
 import { link } from "fs"
 import { Tech } from "../components/Tech"
-import { jobs } from "../constants/jobs"
+import { jobs } from "../constants/jobText"
 
 export const Experience = () => {
     return (

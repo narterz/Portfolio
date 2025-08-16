@@ -17,7 +17,7 @@ export interface Job {
     skills: string;
 }
 
-export type TechDescription = {
+export type IconText = {
     name: string
     icon: React.ReactElement;
 }
@@ -39,7 +39,16 @@ type ProjectDetails = {
 export type ProjectDescription = {
     projectName: string;
     projectScreenshot: any;
-    projectLanguages: TechDescription[];
+    projectLanguages: IconText[];
     projectLinks: ProjectLinks;
     projectDetails: ProjectDetails
+}
+
+//Contact
+
+export interface ContactForm {
+    name: string;
+    ref: React.RefObject<HTMLInputElement | HTMLTextAreaElement>;
+    type: string;
+    placeholder: string;
 }
