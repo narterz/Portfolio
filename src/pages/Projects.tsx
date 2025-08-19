@@ -35,7 +35,7 @@ export const Projects = () => {
         </svg>
       </div>
       <motion.div
-        className="w-[90%] h-[95%] flex flex-col justify-between absolute md:top-[10rem] lg:top-[12rem] "
+        className="w-[90%] h-full flex flex-col justify-between absolute md:top-[10rem] lg:top-[12rem] "
         initial="hidden"
         ref={ref}
         animate={controlY}

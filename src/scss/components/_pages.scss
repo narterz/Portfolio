@@ -125,7 +125,8 @@
             align-items: flex-start;
             justify-content: space-between;
             height: 100vh;
-            @apply flex-col rounded-lg w-full xl:flex-row;
+            @apply flex-col rounded-lg w-full;
+            @apply xl:relative xl:flex-row;
 
             .project-visuals-container {
                 @apply xsm:h-2/3 xsm:justify-between xsm:w-full;
@@ -179,7 +180,7 @@
             }
 
             .project-description-container {
-                @apply xsm:max-xl:w-full xsm:max-lg:h-3/5;
+                @apply xsm:max-xl:w-full xsm:max-lg:h-2/3;
                 @apply xsm:h-1/2;
                 @apply xl:w-1/2 xl:h-2/3 xl:pl-6;
 
@@ -187,12 +188,16 @@
                     @apply xsm:text-center xsm:h-1/2;
                     @apply md:h-[40%];
                     @apply lg:text-start lg:h-1/3;
+                    @apply xl:mt-36;
+                    @apply xxl:mt-24;
                 }
 
                 .project-description-features {
                     @apply xsm:h-1/3 xsm:flex xsm:justify-between flex-col;
                     @apply md:h-1/2;
                     @apply lg:justify-evenly;
+                    @apply xl:h-1/3
+                    
                 }
 
                 .project-description-tech {

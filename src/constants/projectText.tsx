@@ -5,8 +5,10 @@ import cityLoginImg from '../Project screenshots/city login/login-home.png.png';
 import quickTriviaImg from '../Project screenshots/quick trivia/qt-home.png';
 import studyTimerImg from '../Project screenshots/quick trivia/qt-home.png';
 import shirtAIImg from '../Project screenshots/shirtAi/sa-home.png.png';
-import { SiBootstrap, SiExpress, SiSass, SiCss3, SiTypescript, SiTailwindcss } from 'react-icons/si';
+import LLImg from '../Project screenshots/laugh login/LL-start.png';
+import { SiBootstrap, SiExpress, SiSass, SiCss3, SiTypescript, SiTailwindcss, SiMongodb } from 'react-icons/si';
 import { BiLogoJavascript, BiLogoReact, BiLogoNodejs } from 'react-icons/bi';
+
 
 export const ProjectDescriptions:ProjectDescription[] = [
 
@@ -34,22 +36,28 @@ export const ProjectDescriptions:ProjectDescription[] = [
     },
 
     {
-        projectName: "City Login",
-        projectScreenshot: cityLoginImg,
+        projectName: "Laugh Login",
+        projectScreenshot: LLImg,
         projectLanguages: [
-            { name: "Javascript", icon: <BiLogoJavascript className='text-[#F7DF1E]' size={50} /> },
+            { name: "TypeScript", icon: <SiTypescript className='text-[#3178C6]' size={50} /> },
             { name: "React", icon: <BiLogoReact className='text-[#61dbfb]' size={50} /> },
-            { name: "SCSS", icon: <SiSass className='text-[#CC6699]' size={50} /> },
+            { name: "Tailwind", icon: <SiTailwindcss className='text-[#38B2AC]' size={50} /> },
+            { name: "NodeJS", icon: <BiLogoNodejs className='text-[#339933]' size={50} /> },
+            { name: "ExpressJS", icon: <SiExpress className='text-black' size={50} /> },
+            { name: "MongoDB", icon: <SiMongodb className='text-[#589636]'  size={50} /> },
+
         ],
         projectLinks: {
-            githubLink: "https://thecitylogin.com",
-            websiteLink: "https://github.com/narterz/City-login.git"
+            githubLink: "https://laugh-login.vercel.app/home",
+            websiteLink: "https://github.com/narterz/LaughLogin"
         },
         projectDetails: {
-            summary: "City Login is a login screen that checks for login validation such as character length, capital letter, special characters, and numbers.",
+            summary: "This application is an upgrade of one of my first projects, City Login. In laugh login, a user can create an account manually or via Oauth2.0 from social media platforms Facebook, Github, Google, or Discord. Once a user logs in they are redirected to the joke page where they can view their account details and generate jokes.",
             features: [
-                "Credential validation indicators",
-                "Login success screen"
+                "Manual sign up form: Logs users account to database",
+                "Manual login form: retrieves matching user from database",
+                "Forgot password form: Updates password by username",
+                "Comprehensive validation of user forms",
             ],
             warnings: ""
         }
@@ -79,7 +87,7 @@ export const ProjectDescriptions:ProjectDescription[] = [
         }
     },
     {
-        projectName: "",
+        projectName: "Shirt AI",
         projectScreenshot: shirtAIImg,
         projectLanguages: [
             { name: "Typescript", icon: <SiTypescript className='text-[#3178C6]' size={40} /> },
